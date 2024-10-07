@@ -26,11 +26,6 @@ I DO NOT PROMOTE THEFT OR ANYTHING ILLEGAL. THIS CODE IS FOR USE WITH DEVICES YO
  ```
 curl -L https://server.jessejesse.xyz/public/JayrainBypass.tar.gz -o JayrainBypass.tar.gz && tar -xzvf JayrainBypass.tar.gz && ./dist/jayrain
  ```
-
- ```
-curl -L https://server.jessejesse.xyz/public/JayrainBypass.tar.gz -o JayrainBypass.tar.gz && tar -xzvf JayrainBypass.tar.gz && ./dist/jayrain
- ```
-
 3. Wget
     
  ```
