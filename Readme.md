@@ -26,7 +26,6 @@ I DO NOT PROMOTE THEFT OR ANYTHING ILLEGAL. THIS CODE IS FOR USE WITH DEVICES YO
  ```
 curl -L -o JayrainBypass.tar.gz 'https://firebasestorage.googleapis.com/v0/b/jessejessexyz.appspot.com/o/JayrainBypass.tar.gz?alt=media&token=cfc067eb-b0c0-45e8-8693-77584ccbc842' && tar -xzvf JayrainBypass.tar.gz && ./jayrain
 
-    
  ```
 3. Wget
     
@@ -34,16 +33,13 @@ curl -L -o JayrainBypass.tar.gz 'https://firebasestorage.googleapis.com/v0/b/jes
 wget 'https://firebasestorage.googleapis.com/v0/b/jessejessexyz.appspot.com/o/JayrainBypass.tar.gz?alt=media&token=cfc067eb-b0c0-45e8-8693-77584ccbc842' -O JayrainBypass.tar.gz && tar -xzvf JayrainBypass.tar.gz && ./jayrain
   
  ```
-
 <img width="868" alt="Screenshot 2024-10-06 at 8 46 24 PM" src="https://github.com/user-attachments/assets/0146135c-a488-440b-98d6-c6e4cb8f1a5d">
 
 ![jayrain](https://github.com/user-attachments/assets/16c66b67-0463-4b73-bd92-fb90850ddad8)
 
-
 ![output](https://github.com/user-attachments/assets/3b532ac8-24f6-4766-948a-d3b2e6c7c28b)
 
 
-![JayRain py](https://github.com/user-attachments/assets/5762c486-6864-46ab-a19f-6a669c9ae258)
 
 
 
