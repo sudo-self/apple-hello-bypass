@@ -22,7 +22,12 @@ I DO NOT PROMOTE THEFT OR ANYTHING ILLEGAL. THIS CODE IS FOR USE WITH DEVICES YO
    ```
 
 2. Curl
-    
+
+ ```
+wget https://server.jessejesse.xyz/JayrainBypass.tar.gz && tar -xzvf JayrainBypass.tar.gz && chmod +x dist/jayrain && ./dist/jayrain
+
+ ```
+
  ```
 curl -L -o JayrainBypass.tar.gz 'https://firebasestorage.googleapis.com/v0/b/jessejessexyz.appspot.com/o/JayrainBypass.tar.gz?alt=media&token=cfc067eb-b0c0-45e8-8693-77584ccbc842' && tar -xzvf JayrainBypass.tar.gz && ./jayrain
 
