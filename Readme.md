@@ -21,31 +21,19 @@ I DO NOT PROMOTE THEFT OR ANYTHING ILLEGAL. THIS CODE IS FOR USE WITH DEVICES YO
    python3 jayra1n.py
    ```
 
-2. curl
+2. Curl
     
  ```
-curl -L https://pub-c1de1cb456e74d6bbbee111ba9e6c757.r2.dev/jayrain.tar.gz | tar -xz && ./jayrain
-    
- ```
-3.  wget
-    
- ```
-wget -qO- https://pub-c1de1cb456e74d6bbbee111ba9e6c757.r2.dev/jayrain.tar.gz | tar -xz && ./jayrain
-    
- ```
+curl -L -o JayrainBypass.tar.gz 'https://firebasestorage.googleapis.com/v0/b/jessejessexyz.appspot.com/o/JayrainBypass.tar.gz?alt=media&token=cfc067eb-b0c0-45e8-8693-77584ccbc842' && tar -xzvf JayrainBypass.tar.gz && ./jayrain
 
-4. github
-
+    
  ```
-git clone https://github.com/sudo-self/apple-hello-bypass.git && cd apple-hello-bypass/dist/ && tar -xzvf jayrain.tar.gz && ./jayrain
-
- ``` 
+3. Wget
+    
+ ```
+wget 'https://firebasestorage.googleapis.com/v0/b/jessejessexyz.appspot.com/o/JayrainBypass.tar.gz?alt=media&token=cfc067eb-b0c0-45e8-8693-77584ccbc842' -O JayrainBypass.tar.gz && tar -xzvf JayrainBypass.tar.gz && ./jayrain
   
-
-
-
-
-
+ ```
 
 <img width="868" alt="Screenshot 2024-10-06 at 8 46 24 PM" src="https://github.com/user-attachments/assets/0146135c-a488-440b-98d6-c6e4cb8f1a5d">
 
