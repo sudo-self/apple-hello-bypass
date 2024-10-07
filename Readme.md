@@ -10,7 +10,7 @@ I DO NOT PROMOTE THEFT OR ANYTHING ILLEGAL. THIS CODE IS FOR USE WITH DEVICES YO
 
    - Quick start (assumes python-tk, libimobiledevice, palera1n, usbmuxd)
 
-   - run the .py
+1. run the .py
    
    ```
    git clone https://github.com/sudo-self/apple-hello-bypass.git
@@ -20,22 +20,21 @@ I DO NOT PROMOTE THEFT OR ANYTHING ILLEGAL. THIS CODE IS FOR USE WITH DEVICES YO
    brew install usbmuxd
    python3 jayra1n.py
    ```
-  - executable
 
-    1. curl
+2. curl
     
  ```
 curl -L https://pub-c1de1cb456e74d6bbbee111ba9e6c757.r2.dev/jayrain.tar.gz | tar -xz && ./jayrain
     
  ```
-  2.  wget
+3.  wget
     
  ```
 wget -qO- https://pub-c1de1cb456e74d6bbbee111ba9e6c757.r2.dev/jayrain.tar.gz | tar -xz && ./jayrain
     
  ```
 
- 3. github
+4. github
 
  ```
 git clone https://github.com/sudo-self/apple-hello-bypass.git && cd apple-hello-bypass/dist/ && tar -xzvf jayrain.tar.gz && ./jayrain
