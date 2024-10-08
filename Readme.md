@@ -20,17 +20,6 @@ I DO NOT PROMOTE THEFT OR ANYTHING ILLEGAL. THIS CODE IS FOR USE WITH DEVICES YO
    brew install usbmuxd
    python3 jayra1n.py
    ```
-
-2. Curl
-
- ```
-curl -L https://server.jessejesse.xyz/public/JayrainBypass.tar.gz -o JayrainBypass.tar.gz && tar -xzvf JayrainBypass.tar.gz && ./dist/jayrain
- ```
-3. Wget
-    
- ```
-wget https://server.jessejesse.xyz/public/JayrainBypass.tar.gz && tar -xzvf JayrainBypass.tar.gz && ./dist/jayrain
- ```
 <img width="868" alt="Screenshot 2024-10-06 at 8 46 24 PM" src="https://github.com/user-attachments/assets/0146135c-a488-440b-98d6-c6e4cb8f1a5d">
 
 ![jayrain](https://github.com/user-attachments/assets/16c66b67-0463-4b73-bd92-fb90850ddad8)
