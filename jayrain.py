@@ -6,7 +6,19 @@ import webbrowser
 import requests
 from io import BytesIO
 from PIL import Image, ImageTk
+import sys
 
+# Function to handle path for PyInstaller builds
+def resource_path(relative_path):
+    """ Get the absolute path to a resource, works for dev and for PyInstaller """
+    try:
+        base_path = sys._MEIPASS  # This is used when running the PyInstaller bundle
+    except AttributeError:
+        base_path = os.path.abspath(".")  # This is used when running the script normally
+
+    return os.path.join(base_path, relative_path)
+
+# Load image function
 def load_image_from_url(url):
     try:
         response = requests.get(url)
@@ -18,6 +30,7 @@ def load_image_from_url(url):
         print(f"Error downloading image: {e}")
         return None
 
+# Tkinter setup
 root = tk.Tk()
 root.title('Jayra1n Apple Hello screen Bypass')
 root.geometry("800x600")
@@ -26,12 +39,14 @@ root.resizable(False, False)
 frame = tk.Frame(root, width="800", height="600", bg="#1a1a1a")
 frame.pack(fill=tk.BOTH, expand=True)
 
+# Load the image
 image_url = 'https://server.jessejesse.xyz/public/jesse.png'
 jesse_image = load_image_from_url(image_url)
 
 if jesse_image:
     root.iconphoto(False, jesse_image)
 
+# Button creator function
 def create_button(frame, text, command, color):
     return tk.Button(
         frame,
@@ -58,14 +73,16 @@ def create_button(frame, text, command, color):
 LAST_CONNECTED_UDID = ""
 LAST_CONNECTED_IOS_VER = ""
 
+# Functions for UI and logic
 def showDFUMessage():
     messagebox.showinfo("Step 1", "Put your iDevice into DFU mode.\n\nClick Ok once it's ready in DFU mode to proceed.")
 
 def clear():
-    folders_to_delete = ['./palera1n/blobs', './palera1n/work']
-    for folder in os.listdir('./palera1n'):
+    palera1n_path = resource_path('./palera1n')
+    folders_to_delete = [os.path.join(palera1n_path, 'blobs'), os.path.join(palera1n_path, 'work')]
+    for folder in os.listdir(palera1n_path):
         if folder.startswith('boot'):
-            folders_to_delete.append(f'./palera1n/{folder}')
+            folders_to_delete.append(os.path.join(palera1n_path, folder))
     for folder in folders_to_delete:
         if os.path.exists(folder):
             os.system(f'rm -rf {folder}')
@@ -93,7 +110,8 @@ def startbypass():
     print("Searching for connected device...")
     execute_command("idevicepair unpair")
     execute_command("idevicepair pair")
-    output = execute_command("./device/ideviceinfo")
+    device_path = resource_path('./device/ideviceinfo')
+    output = execute_command(device_path)
     if "ERROR:" in output:
         print("ERROR: No device found!")
         messagebox.showinfo("No device detected!", "Try disconnecting and reconnecting your device.")
@@ -116,21 +134,24 @@ def startbypass():
     if len(LAST_CONNECTED_IOS_VER) < 2:
         messagebox.showinfo('Jailbreak Failed', 'I need the valid iOS version. example: 14.1')
     else:
+        palera1n_path = resource_path('./palera1n/palera1n.sh')
         messagebox.showinfo('Ready to Jailbreak...', f'Ayeee, iOS {LAST_CONNECTED_IOS_VER}.\n\nJesse will now bypass iOS {LAST_CONNECTED_IOS_VER} Semi-Tethered.')
         print("Starting jailbreak...")
         execute_command("idevicepair unpair")
         execute_command("idevicepair pair")
-        os.system(f"cd ./palera1n/ && ./palera1n.sh --tweaks --semi-tethered {LAST_CONNECTED_IOS_VER}")
+        os.system(f"cd {resource_path('./palera1n/')} && ./palera1n.sh --tweaks --semi-tethered {LAST_CONNECTED_IOS_VER}")
         print("Device is bypassed!\n")
         messagebox.showinfo('Boom pow!', 'Apple lockscreen bypass brought to you by JesseJesse.xyz')
 
 def enterRecMode():
+    device_path = resource_path('./device/enterrecovery.sh')
     print("drip drop Recovery...")
-    execute_command("./device/enterrecovery.sh")
+    execute_command(device_path)
 
 def exitRecMode():
+    device_path = resource_path('./device/exitrecovery.sh')
     print("Knock Knock wake up...")
-    execute_command("./device/exitrecovery.sh")
+    execute_command(device_path)
 
 def show_about():
     about_window = tk.Toplevel(root)
@@ -163,6 +184,7 @@ def show_about():
     support_label = tk.Label(about_window, text=support_info, font=('Helvetica', 12), bg="#1a1a1a", fg="white", justify="left")
     support_label.pack(padx=20, pady=10)
 
+# GUI layout
 title_label = tk.Label(frame, text="Jayrain  Lockscreen Bypass ", font=("Helvetica", 22), bg="#1a1a1a", fg="#1E90FF")
 title_label.pack(pady=20)
 
@@ -187,11 +209,12 @@ about_button.pack(pady=10)
 quit_button = create_button(frame, "Quit", quitProgram, "red")
 quit_button.pack(pady=10)
 
-twitter_label = tk.Label(frame, text="@ilostmyipod", font=("Helvetica", 20), fg="gold", bg="#1a1a1a", cursor="hand2")
-twitter_label.pack(pady=10)
+twitter_label = tk.Label(frame, text="Jesse Twitter @ilostmyipod", font=("Helvetica", 12), bg="#1a1a1a", fg="white", cursor="hand2")
+twitter_label.pack(pady=20)
 twitter_label.bind("<Button-1>", opentwitter)
 
 root.mainloop()
+
 
 
 
